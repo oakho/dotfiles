@@ -126,8 +126,8 @@ SAVEHIST=10000
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/Projects
 
-fpath=($ZSH/functions $fpath)
-autoload -U $ZSH/functions/*(:t)
+# fpath=($ZSH/functions $fpath)
+# autoload -U $ZSH/functions/*(:t)
 
 eval "$(rbenv init -)"
 
