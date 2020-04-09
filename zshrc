@@ -111,10 +111,7 @@ for file in ~/.{path,exports,aliases,functions,extra}; do
 done;
 unset file;
 
-export VOLTA_HOME="$HOME/.volta"
-[ -s "$VOLTA_HOME/load.sh" ] && . "$VOLTA_HOME/load.sh"
 
-export PATH="$VOLTA_HOME/bin:$PATH"
 
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
@@ -141,3 +138,5 @@ then
   unfunction preexec
   PS1='$ '
 fi
+export VOLTA_HOME="/home/oakho/.volta"
+grep --silent "$VOLTA_HOME/bin" <<< $PATH || export PATH="$VOLTA_HOME/bin:$PATH"
